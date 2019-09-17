@@ -1,0 +1,376 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/ionicons.min.css'%}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" >
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main_style.css'%}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}" >
+        <link rel="stylesheet" type="text/css" href="{% static 'css/grid.css' %}" >
+        <title> Faso Wari</title>
+        <meta charset="utf-8">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
+            charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js" charset="utf-8"></script>
+    <script src="{% static 'js/jquery.mapael.js' %}" charset="utf-8"></script>
+    <script src="{%static 'js/france_departments.js'%}" charset="utf-8"></script>
+    <script src="{%static 'js/usa_states.js'%}" charset="utf-8"></script>
+    <script src="{% static 'js/world_countries.js'%}"></script>
+    <script src="{% static 'js/myScript.js'%}"></script>
+    <!--<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>-->
+
+
+    </head>
+    <body>
+        <header>
+            <nav class="main_nav">
+                <img src="{% static 'img/logo_wari.png'%}" alt="logo entreprise Faso Wari" class="logo_wari">
+                <div class="main_menu">
+                    <div class="main_menu_item1">
+                        <a href="#">Destinations</a>
+                    </div>
+                    <div class="main_menu_item2">
+                        <a href="#">Partenaires</a>
+                    </div>
+                    <div class="main_menu_item3">
+                        <a href="#">Qui sommes nous!</a>
+                    </div>
+                </div>
+            </nav>
+            <h1>
+                Bienvenue sur Faso-Wari!
+            </h1>
+            <div class="div_formulaire">
+                <form class="identifier_form">
+                    <span class="title_identifier_form">
+                        Idetifiez vous
+                    </span>
+                    <div class="identifiant_detail1">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <!--<ion-icon name="person"></ion-icon>-->
+                        <input type="text" placeholder="Entrez votre Identifiant" name="" value="" required="true">
+                    </div>
+                    <div class="identifiant_detail2">
+                        <!--<i class="glyphicon glyphicon-wrench"></i>-->
+                        <ion-icon name="key"></ion-icon>
+                        <input type="password" placeholder="Mot de passe" name="" value="" required="true">
+                    </div>
+                    <div class="div_submit_button">
+                        <button class="submi_button">
+                            <input class="btn" type="button" placeholder="" name="" value="Valider">
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="div_detail_formulaire">
+                <h2>
+                    Pourquoi s'identifier
+                </h2>
+                <p>
+                    Nous vous invitons à vous identifier avec les informations transmises lors de la création de votre compte Faso-Wari
+                </p>
+            </div>
+        </header>
+        <section class="section_destination">
+            <figure class="pays_1 col-6 col-md-4">
+                <h3>
+                    Mali
+                </h3>
+                <div class="pays_1_description">
+                    Plus de 3000 points de retraits, rien que pour vous. nous sommes implantés à Bamako, Kayes et Sikasso
+                </div>
+                <div class="pays_1_service">
+                        <div>
+                            <i class="glyphicon glyphicon-send"></i> Frais d'envoi 5 euros
+                        </div>
+                        <div>
+                            <i class="glyphicon glyphicon-map-marker"></i> Trouvez un point de retrait à proximité
+                       </div>
+                        <div>
+                            <i class="glyphicon glyphicon-info-sign"></i> Nos Parténaires
+                        </div>
+                </div>
+                <div class="pays_1_img">
+                    <img src="Resources/img/mali.jpg" alt="image correspondant au pays 1">
+                </div>
+                <div class="pays_1_contact_dans_destination">
+                    <a href="#">Contacter notre siège à Bamako.</a>
+                </div>
+            </figure>
+            <figure class="pays_2 col-6 col-md-4">
+                <h3>
+                    Sénégal
+                </h3>
+                <div class="pays_2_description">
+                    Plus de 3000 points de retrais, rien que pour vous. nous sommes implantés à Dakar, Gadiaga et Guidimakha
+                </div>
+                <div class="pays_2_service">
+                    <div>
+                        <i class="glyphicon glyphicon-send"></i> Frais d'envoi 5 euros
+                    </div>
+                    <div>
+                        <i class="glyphicon glyphicon-map-marker"></i> Trouvez un point de retrait à proximité
+                   </div>
+                    <div>
+                        <i class="glyphicon glyphicon-info-sign"></i> Nos Parténaires
+                    </div>
+                </div>
+                <div class="pays_2_img">
+                    <img src="Resources/img/senegal.png" alt="image correspondant au pays 2">
+                </div>
+                <div class="pays_2_contact_dans_destination">
+                    <a href="#">Contacter notre siège à Dakar.</a>
+                </div>
+            </figure>
+            <figure class="pays_3 col-6 col-md-4">
+                <h3>
+                    Côte d'Ivoire
+                </h3>
+                <div class="pays_3_description">
+                    Plus de 3000 points de retraits, rien que pour vous. nous sommes implantés à Abidjan
+                </div>
+                <div class="pays_3_service">
+                    <div>
+                        <i class="glyphicon glyphicon-send"></i> Frais d'envoi 5 euros
+                    </div>
+                    <div>
+                        <i class="glyphicon glyphicon-map-marker"></i> Trouvez un point de retrait à proximité
+                   </div>
+                    <div>
+                        <i class="glyphicon glyphicon-info-sign"></i> Nos Parténaires
+                    </div>
+                </div>
+                <div class="pays_3_img">
+                    <img src="Resources/img/ci.jpg" alt="image correspondant au pays 3" >
+                </div>
+                <div class="pays_3_contact_dans_destination">
+                    <a href="#">Contacter notre siège à Abidjan.</a>
+                </div>
+            </figure>
+        </section>
+        <section class="destination_section">
+            <div class="container">
+                 <h1>Our destinations around the World</h1>
+                <div class="mapcontainer">
+                    <div class="map">
+                        <span>Alternative content for the map</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partenaires_section">
+            <h2> Nos Partenaires</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="premier_partenaire">
+                            <img src="Resources/img/Partenaires/bim-sa.png" alt="image of our first partenaire">
+                            <div class="premier_partenaire_description">
+                                <div class="premier_partenaire_description_header"> Nous fait Confiance</div>
+                                <div class="premier_partenaire_description_content">
+                                    <div><i class="glyphicon glyphicon-ok"></i> Possibilité d'nevoi</div>
+                                    <div><i class="glyphicon glyphicon-ok"></i> Possibilité de retirer</div>
+                                    <div><i class="glyphicon glyphicon-ok"></i> Type de Partenariat Premium</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                    </div>
+                    <div class="col-3">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                    </div>
+                    <div class="col-3">
+                    </div>
+                    <div class="col-6">
+                        <div class="seconde_partenaire">
+                            <img src="Resources/img/Partenaires/LOGO-CBI.jpg" alt="image of our first partenaire">
+                            <div class="seconde_partenaire_description">
+                                <div class="seconde_partenaire_description_header"> Nous fait Confiance</div>
+                                <div class="seconde_partenaire_description_content">
+                                    <div><i class="glyphicon glyphicon-ok"></i> Possibilité d'nevoi</div>
+                                    <div><i class="glyphicon glyphicon-ok"></i> Possibilité de retirer</div>
+                                    <div><i class="glyphicon glyphicon-ok"></i> Type de Partenariat Premium</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="troisieme_partenaire">
+                            <img src="Resources/img/Partenaires/logo_bnp.jpg" alt="image of our first partenaire">
+                            <div class="troisieme_partenaire_description">
+                                <div class="troisieme_partenaire_description_header"> Nous fait Confiance</div>
+                                <div class="troisieme_partenaire_description_content">
+                                    <div><i class="glyphicon glyphicon-ok"></i> Possibilité d'nevoi</div>
+                                    <div><i class="glyphicon glyphicon-ok"></i> Possibilité de retirer</div>
+                                    <div><i class="glyphicon glyphicon-ok"></i> Type de Partenariat Premium</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                    </div>
+                    <div class="col-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="aboutus_section">
+
+
+            <div class="aboutus-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="aboutus">
+                                <h2 class="aboutus-title">A propos de Nous</h2>
+                                <p class="aboutus-text">Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.</p>
+                                <p class="aboutus-text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem</p>
+                                <a class="aboutus-more" href="#">read more</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="aboutus-banner">
+                                <img src="/Resources/img/transfer_sign.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-6 col-xs-12">
+                            <div class="feature">
+                                <div class="feature-box">
+                                    <div class="clearfix">
+                                        <div class="iconset">
+                                            <span class="glyphicon glyphicon-heart icon"></span>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h4>Work with heart</h4>
+                                            <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feature-box">
+                                    <div class="clearfix">
+                                        <div class="iconset">
+                                            <span class="glyphicon glyphicon-sort icon"></span>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h4>Reliable services</h4>
+                                            <p>Donec vitae sapien ut libero venenatis faucibu. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feature-box">
+                                    <div class="clearfix">
+                                        <div class="iconset">
+                                            <span class="glyphicon glyphicon-cog icon"></span>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h4>Great support</h4>
+                                            <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="page-footer font-small blue pt-4">
+
+          <!-- Footer Links -->
+          <div class="container-fluid text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+              <!-- Grid column -->
+              <div class="col-md-6 mt-md-0 mt-3">
+
+                <!-- Content -->
+                <h5 class="text-uppercase">Footer Content</h5>
+                <p>Here you can use rows and columns to organize your footer content.</p>
+
+              </div>
+              <!-- Grid column -->
+
+              <hr class="clearfix w-100 d-md-none pb-3">
+
+              <!-- Grid column -->
+              <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="text-uppercase">Links</h5>
+
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!">Link 1</a>
+                  </li>
+                  <li>
+                    <a href="#!">Link 2</a>
+                  </li>
+                  <li>
+                    <a href="#!">Link 3</a>
+                  </li>
+                  <li>
+                    <a href="#!">Link 4</a>
+                  </li>
+                </ul>
+
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="text-uppercase">Links</h5>
+
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!">Link 1</a>
+                  </li>
+                  <li>
+                    <a href="#!">Link 2</a>
+                  </li>
+                  <li>
+                    <a href="#!">Link 3</a>
+                  </li>
+                  <li>
+                    <a href="#!">Link 4</a>
+                  </li>
+                </ul>
+
+              </div>
+              <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+          </div>
+          <!-- Footer Links -->
+
+          <!-- Copyright -->
+          <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/"> faso-wari.com</a>
+          </div>
+          <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+
+
+    </body>
+</html>

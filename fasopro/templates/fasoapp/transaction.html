@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" >
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="Resources/css/main_style.css">        
+    </head>
+    <body>
+        <header class="transaction_header">
+            <nav class="main_nav">
+                <img src="Resources/img/logo_wari.png" alt="logo entreprise Faso Wari" class="logo_wari">
+                <div class="main_menu">
+                    <div class="main_menu_item1">
+                        <a href="#">Destinations</a>
+                    </div>
+                    <div class="main_menu_item2">
+                        <a href="#">Partenaires</a>
+                    </div>
+                    <div class="main_menu_item3">
+                        <a href="#">Qui sommes nous!</a>
+                    </div>
+                </div>
+            </nav>
+        <div class="main_transaction">
+            <div class="container transaction_form_container">
+                <form>
+                    <div class="form-group">
+                        <label for="pays_selectionne">Pays de destination</label>
+                        <select class="form-control" id="pays_selectionne">
+                          <option>MALI</option>
+                          <option>SENEGAL</option>
+                          <option>COTE D'IVOIRE</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="formGroupMontantE"> Montant en &euro;</label>
+                            <input type="text" class="form-control" placeholder="Montant en €" id="formGroupMontantE">
+                        </div>
+                        <div class="col">
+                            <label for="formGroupMontantF"> Montant en FCFA</label>
+                            <input type="text" class="form-control" placeholder="Montant en FCFA" id="formGroupMontantF">
+                        </div>
+                    </div>
+                <fieldset class="exp_fieldset">
+                    <div class="exp_fieldset_header">Expéditaire</div>
+                  <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="formGroupNomE"> NOM</label>
+                            <input type="text" class="form-control" placeholder="NOM" id="formGroupNomE">
+                        </div>
+                        <div class="col">
+                            <label for="formGroupPrenomE"> Prénom</label>
+                            <input type="text" class="form-control" placeholder="Prénom" id="formGroupPrenomE">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="formGroupNumE"> N° de Tel</label>
+                            <input type="text" class="form-control" placeholder="N° Téléphone" id="formGroupNumE">
+                        </div>
+                        <div class="col">
+                            <label for="formGroupNumPieceE"> N° de Pièce</label>
+                            <input type="text" class="form-control" placeholder="N° Piece d'identité" id="formGroupNumPieceE">
+                        </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset class="dest_fieldset">
+                    <div class="dest_fieldset_header">Destinataire</div>
+                  <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="formGroupNomD"> NOM</label>
+                            <input type="text" class="form-control" placeholder="NOM" id="formGroupNomD">
+                        </div>
+                        <div class="col">
+                            <label for="formGroupPrenomD"> Prénom</label>
+                            <input type="text" class="form-control" placeholder="Prénom" id="formGroupPrenomD">
+                        </div>
+                    </div>
+                          
+                  </div>
+                  <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="formGroupNumD"> N° de Tel</label>
+                            <input type="text" class="form-control" placeholder="N° Téléphone" id="formGroupNumD">
+                        </div>
+                        <div class="col">
+                            <label for="formGroupNumPieceD"> N° de Pièce</label>
+                            <input type="text" class="form-control" placeholder="N° Piece d'identité" id="formGroupNumPieceD">
+                        </div>
+                    </div>
+                  </div>
+                </fieldset>
+                    <div class="transaction_button"> 
+                    <button type="submit" class="btn btn-primary mb-2 ">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </header>
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    </body>
+</html>

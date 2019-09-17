@@ -1,0 +1,427 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --site-main-color: #3d5afe; /*#0b0bfa;*/
+    --formular-background: linear-gradient(#ECE9E6, #FFFFFF);
+}
+
+html,
+body {
+    font-size: 20px;
+    background-color: #fff;
+    color: #504f4f;
+    font-family: 'Roboto','Arial',sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+h2 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+}
+header {
+    background-color: #fff;
+    height: 80vh;
+}
+
+/*----------------------------------------------------------*/
+/*******************                      *******************/
+/*******************    Menu              *******************/
+/*******************                      *******************/
+/*----------------------------------------------------------*/
+.main_nav {
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px rgba(11, 11, 250, 0.51);
+}
+.logo_wari {
+    display: inline-block;
+    padding: 10px;
+    width: 100px;
+    height: 75px;
+}
+.main_menu {
+    margin-top: 20px;
+    float: right;
+    width: 40%;
+    display: flex;
+    justify-content:space-around;
+}
+/*----------------------------------------------------------*/
+/*******************                      *******************/
+/*****************   Formulaire           *******************/
+/*******************                      *******************/
+/*----------------------------------------------------------*/
+
+.div_formulaire {
+    position: absolute;
+    display: block;
+    width: 40vw;
+    height: 25vh;
+    background-image: var(--formular-background);
+    left: 29%;
+    border-radius: 10px;
+    border-bottom: 5px solid;
+}
+.title_identifier_form {
+    font-size: 20px;
+    margin-left: 150px;
+    display: block;
+}
+
+.identifiant_detail1 {
+    margin-left: 65px;
+}
+.identifiant_detail2 {
+    margin-left: 70px;
+}
+
+.submi_button {
+    margin-left: 60px;
+    width: 350px;
+    cursor: pointer;
+    background: none;
+}
+
+.btn {
+    width: 100%;
+    background-color: none;
+    cursor: pointer;
+}
+.div_detail_formulaire {
+    position: absolute;
+    display: block;
+    width: 80vh;
+    top: 60%;
+    left: 30%;
+    margin-bottom: 20px;
+}
+.div_detail_formulaire > h2 {
+    text-align: center;
+}
+
+/*----------------------------------------------------------*/
+/*******************                      *******************/
+/*****************   Destinations         *******************/
+/*******************                      *******************/
+/*----------------------------------------------------------*/
+
+.section_destination {
+    display: flex;
+    padding: 20px 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.pays_1,
+.pays_2,
+.pays_3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0 0 3px;
+    height: 50vw;
+    padding: 20px;
+    border-radius: 10px;
+    border: 0.5px solid;
+    border-color: var(--site-main-color);
+}
+.pays_1:hover,
+.pays_2:hover,
+.pays_3:hover {
+    border-bottom: 5px solid;
+    border-color: var(--site-main-color);
+}
+.pays_1 > h3,
+.pays_2 > h3,
+.pays_3 > h3 {
+    text-align: center;
+    color: var(--site-main-color);
+}
+
+.pays_1_description,
+.pays_2_description,
+.pays_3_description {
+    margin: 5px 0 10px 0;
+    background-image: var(--formular-background);
+    border-radius: 5px;
+}
+.pays_3_img > img{
+    width: 70%;
+    height: 80%;
+}
+
+/*********** Second destination Section for map *************/
+.destination_section {
+    height: auto;
+    padding: 10px;
+}
+.destination_section > .container > h1,
+.destination_section > h2 {
+    color: var(--site-main-color);
+}
+
+
+.destination_section > .container {
+    /*max-width: 800px;*/
+    margin: auto;
+}
+
+/* Specific mapael css class are below
+ * 'mapael' class is added by plugin
+*/
+
+.destination_section > .mapael .map {
+    position: relative;
+}
+
+.destination_section > .mapael .mapTooltip {
+    position: absolute;
+    background-color: #fff;
+    moz-opacity: 0.70;
+    opacity: 0.70;
+    filter: alpha(opacity=70);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1000;
+    max-width: 200px;
+    display: none;
+    color: #343434;
+}
+
+.destination_section > .mapael .areaLegend {
+    margin-bottom: 20px;
+}
+
+
+/*----------------------------------------------------------*/
+/*******************                      *******************/
+/*****************   Partenaires          *******************/
+/*******************                      *******************/
+/*----------------------------------------------------------*/
+.partenaires_section {
+    padding: 10px;
+    margin-top: 10px;
+}
+.partenaires_section > h2 {
+    color: var(--site-main-color);
+}
+
+.premier_partenaire,
+.seconde_partenaire,
+.troisieme_partenaire {
+    border: 4px solid var(--site-main-color);
+    border-radius: 10px;
+}
+.premier_partenaire {
+    display: flex;
+}
+.premier_partenaire:hover,
+.seconde_partenaire:hover,
+.troisieme_partenaire:hover {
+    transform: scale(1.15);
+    transition: transform 0.5s;
+}
+.premier_partenaire > img {
+    width: 40%;
+}
+.premier_partenaire_description,
+.seconde_partenaire_description,
+.troisieme_partenaire_description {
+    flex-grow: 1;
+}
+.premier_partenaire_description_header,
+.seconde_partenaire_description_header,
+.troisieme_partenaire_description_header {
+    background-image: linear-gradient(to bottom,var(--site-main-color),#0b0bfa );
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+}
+.premier_partenaire_description_content {
+}
+.seconde_partenaire {
+    display: flex;
+}
+.seconde_partenaire > img {
+    width: 40%;
+    height: 20vh;
+}
+.troisieme_partenaire {
+    display: flex;
+}
+.troisieme_partenaire > img {
+    width: 40%;
+}
+/*----------------------------------------------------------*/
+/*******************                      *******************/
+/*****************   A propos de nous     *******************/
+/*******************                      *******************/
+/*----------------------------------------------------------*/
+.aboutus_section {
+    height: 100vh;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.aboutus-title {
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: 32px;
+    margin: 0 0 39px;
+    padding: 0 0 11px;
+    position: relative;
+    text-transform: uppercase;
+    color: #000;
+}
+.aboutus-title::after {
+    background: var(--site-main-color) none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 514px;
+}
+.aboutus-text {
+    color: #606060;
+    font-size: 13px;
+    line-height: 22px;
+    margin: 0 0 35px;
+}
+
+a:hover, a:active {
+    color: var(--site-main-color);
+    text-decoration: none;
+    outline: 0;
+}
+.aboutus-more {
+    border: 1px solid var(--site-main-color);
+    border-radius: 25px;
+    color: var(--site-main-color);
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    padding: 7px 20px;
+    text-transform: uppercase;
+}
+.feature .feature-box .iconset {
+    background: #fff none repeat scroll 0 0;
+    float: left;
+    position: relative;
+    width: 18%;
+}
+.feature .feature-box .iconset::after {
+    background: var(--site-main-color) none repeat scroll 0 0;
+    content: "";
+    height: 150%;
+    left: 43%;
+    position: absolute;
+    top: 100%;
+    width: 1px;
+}
+
+.feature .feature-box .feature-content h4 {
+    color: #0f0f0f;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin: 0 0 5px;
+}
+
+
+.feature .feature-box .feature-content {
+    float: left;
+    padding-left: 28px;
+    width: 78%;
+}
+.feature .feature-box .feature-content h4 {
+    color: #0f0f0f;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin: 0 0 5px;
+}
+.feature .feature-box .feature-content p {
+    color: #606060;
+    font-size: 13px;
+    line-height: 22px;
+}
+.icon {
+    color : var(--site-main-color);
+    padding:0px;
+    font-size:40px;
+    border: 1px solid var(--site-main-color);
+    border-radius: 100px;
+    color: var(--site-main-color);
+    font-size: 28px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    width: 70px;
+}
+
+/*----------------------------------------------------------*/
+/*******************                      *******************/
+/*****************   Transactions         *******************/
+/*******************                      *******************/
+/*----------------------------------------------------------*/
+
+.transaction_header {
+    height: 100vh;
+}
+.main_transaction {
+    background-image: url(/Resources/img/transaction_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.transaction_form_container {
+    width: 50%;
+    background-image: var(--formular-background);
+    border-radius: 5px;
+    position: relative;
+}
+
+.exp_fieldset,
+.dest_fieldset {
+    background-color: #fff;
+    margin: 20px 0 10px 0;
+    border-radius: 5px;
+    padding: 5px;
+}
+.exp_fieldset_header,
+.dest_fieldset_header {
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    background-color:var(--site-main-color);
+    border-radius: 10px;
+}
+.transaction_button {
+    width: 25%;
+    transform: translate(140%,-50%);
+}
+.mb-2 {
+    background-color: var(--site-main-color);
+}
+
+/*----------------------------------------------------------*/
+/*******************                      *******************/
+/*****************   Footer               *******************/
+/*******************                      *******************/
+/*----------------------------------------------------------*/
+.page-footer {
+    background-image:linear-gradient(var(--site-main-color),#0b0bfa);
+    color: #fff;
+}
